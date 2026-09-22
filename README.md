@@ -1,4 +1,4 @@
-# alta_quali_desconto_app# 📦 Sistema de Cálculo e Gestão de Pedidos
+# 📦 Sistema de Cálculo e Gestão de Pedidos
 
 Um sistema robusto e escalável para o cálculo de pedidos e aplicação de regras de desconto, desenvolvido para atender ao crescimento e à complexidade das operações de uma loja online.
 
