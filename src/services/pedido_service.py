@@ -1,15 +1,16 @@
 from src.models.pedido import Pedido
 
 class PedidoService:
-    """Serviço para gerenciar operações relacionadas a pedidos."""
+    """classe de serviço para processar pedidos e aplicar descontos."""
 
-    def __init__(self):
-        self.pedidos = []
+    def __init__(self, repository):
+        self.repository = repository
 
     def adicionar_pedido(self, pedido: Pedido):
-        self.pedidos.append(pedido)
+        self.repository.adicionar_pedido(pedido)
 
     def processar_pedidos(self):
-        for pedido in self.pedidos:
-            print(f"Processando pedido para {pedido.cliente}.")
+        pedidos = self.repository.listar_pedidos()
+        for pedido in pedidos:
+            print(f"cliente: {pedido.cliente}")
             print(f"Valor final: {pedido.valor_final(pedido.valor_original)}")
